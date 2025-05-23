@@ -48,22 +48,37 @@ header{
 }
 
 /* BANNER */
-#banner{
-    padding: 0 50px;
-    background-image: url(../img/imginicio.JPG);
+#banner {
     height: 45vh;
+    background-image: url('../img/imginicio.JPG'); 
     background-size: cover;
     background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
 }
 
-#banner::before{
-    content: '';
-    background: rgba(77,77,92,0.6);
+/* Capa oscura semitransparente sobre la imagen */
+#banner::before {
+    content: "";
     position: absolute;
-    width: 100%;
-    height: 45vh;
+    top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Opacidad uniforme */
+    z-index: 1;
 }
+
+/* Contenido del banner sobre la capa oscura */
+#banner .contenido-banner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
 
 .contenido-banner{
     position: relative;
@@ -162,37 +177,47 @@ header{
 }
 
 
-#pie{
-    font-size: 20px%;
+#pie {
+    font-size: 16px;
     background-color: #002e2e;
-    padding: 15px 0px;
-    color: rgba(0, 190, 190, 0.489);
-}
-#pie h4{
+    padding: 10px 0;
+    color: rgba(0, 190, 190, 0.6);
     text-align: center;
 }
 
-.servicios a{
-    color: rgb(255, 255, 255);
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 0 10px;
-    transition: 0.4s;
-    display: flex;
-    position: relative;
-    color: azure;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    font-size: 25px;
-    font-weight: 400;
-    padding: 10px 0px;
-    top: 100px;
+@media (max-width: 768px) {
+    #pie {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
 }
 
-.servicios a:hover{
-    color: rgba(0, 46, 46);
+
+
+.servicios {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
 }
+
+.servicios a {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #5f9ea0;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    z-index: 2;
+}
+
+.servicios a:hover {
+    background-color: #417a80;
+    transform: scale(1.1);
+}
+
 
 #texto{
     padding: 50px 50px;
@@ -268,9 +293,6 @@ header{
     .boton-contactanos{
         flex-direction: column;
     }
-    .pie h4{
-        flex-direction: column;
-    }
     
     .servicios a{
         display: block;
@@ -299,3 +321,170 @@ header{
 
 }
 
+
+html {
+    scroll-behavior: smooth;
+}
+.navbar-collapse {
+    transition: all 0.3s ease;
+}
+.logo {
+    color: #002e2e;
+    font-weight: 300;
+    font-size: 1.75rem;
+}
+@media (max-width: 768px) {
+    .logo {
+    font-size: 1.5rem;
+    }
+}
+
+
+.contenido-consulta .container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-size: 1.1em;
+}
+
+.contact-links {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.boton-contacto {
+    padding: 10px 20px;
+    background-color: #5f9ea0;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+.boton-contacto:hover {
+    background-color: #417a80;
+}
+
+.perfil-dueno {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.foto-dueno {
+    width: 250px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.texto-perfil {
+    max-width: 500px;
+    font-size: 1.1em;
+}
+
+.texto-perfil h4 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.texto-perfil p {
+    margin: 10px 0;
+}
+
+#iconos {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#contenido-iconos {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* Animación de entrada (imagen y texto) */
+.perfil-dueno {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.3s;
+}
+
+/* Efecto hover en la imagen del dueño */
+.foto-dueno {
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.foto-dueno:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Transición en íconos de redes */
+#contenido-iconos img {
+    transition: transform 0.3s ease;
+}
+#contenido-iconos img:hover {
+    transform: scale(1.1);
+}
+
+/* Botones con efecto suave */
+.boton-contacto {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.boton-contacto:hover {
+    transform: scale(1.05);
+}
+
+/* Animación keyframes */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.contenido-consulta p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+
+.contenido-consulta .container {
+    text-align: center;
+}
+
+.banner-sin-imagen .contenido-banner {
+    opacity: 0;
+    transform: translateY(-10px);
+    animation: fadeInDown 1s ease forwards;
+}
+
+@keyframes fadeInDown {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.botones-contacto {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.boton-contacto {
+    padding: 10px 20px;
+    background-color: #5f9ea0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
