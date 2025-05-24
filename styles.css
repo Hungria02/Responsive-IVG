@@ -1,0 +1,382 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+header {
+  height: 100px;
+  background: #5f9ea0;
+  padding: 0 50px;
+  color: azure;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header .logo {
+  color: #002e2e;
+  font-weight: 200;
+  font-size: 1.75rem;
+}
+@media (max-width: 768px) {
+  header .logo {
+    font-size: 1.5rem;
+  }
+}
+header .menu a {
+  color: azure;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+}
+header .mostrar-menu,
+header .esconder-menu {
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+  transition: 0.4s;
+}
+header .mostrar-menu {
+  order: 1;
+}
+header .menu a:hover,
+header .mostrar-menu:hover,
+header .esconder-menu:hover {
+  color: rgb(0, 46, 46);
+}
+header #check {
+  display: none;
+}
+
+#banner {
+  height: 45vh;
+  background-image: url("../img/imginicio.JPG");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+#banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+#banner .contenido-banner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: azure;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#banner .contenido-banner h3 {
+  font-size: 30px;
+  font-weight: 400;
+  padding: 10px 0;
+}
+#banner .contenido-banner h3 span {
+  font-weight: 600;
+}
+#banner .contenido-banner .boton-empezar {
+  text-decoration: none;
+  color: azure;
+  border: 1px solid cadetblue;
+  padding: 20px 40px;
+  align-self: baseline;
+  transition: all 0.4s;
+}
+#banner .contenido-banner .boton-empezar:hover {
+  background: rgba(95, 158, 160, 0.6392156863);
+}
+
+#persona {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#persona img {
+  border-radius: 100%;
+  width: 150px;
+  height: 160px;
+}
+#persona div {
+  padding: 30px;
+}
+#persona div h4 {
+  color: rgb(0, 46, 46);
+  font-size: 20px;
+  margin: 15px 0;
+}
+#persona div p {
+  color: rgba(95, 158, 160, 0.463);
+  font-size: 18px;
+}
+
+#iconos {
+  padding: 0 50px;
+  background: rgba(95, 158, 160, 0.4274509804);
+}
+#iconos #contenido-iconos {
+  padding: 50px 50px 0;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+#iconos #contenido-iconos div {
+  flex: 1;
+  margin: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#iconos #contenido-iconos img {
+  transition: transform 0.3s ease;
+}
+#iconos #contenido-iconos img:hover {
+  transform: scale(1.1);
+}
+
+#pie {
+  font-size: 16px;
+  background-color: #002e2e;
+  padding: 10px 0;
+  color: rgba(0, 190, 190, 0.6);
+  text-align: center;
+}
+@media (max-width: 768px) {
+  #pie {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+
+.servicios {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.servicios a {
+  padding: 15px 30px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-color: #5f9ea0;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s, background-color 0.4s;
+  z-index: 2;
+}
+.servicios a:hover {
+  background-color: #417a80;
+  transform: scale(1.1);
+}
+
+#texto {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+#texto div {
+  padding: 30px;
+}
+#texto div p {
+  color: #5f9ea0;
+  font-size: 18px;
+}
+
+.serv {
+  color: azure;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 0 10px;
+  transition: 0.4s;
+  margin-top: 15px;
+  text-align: right;
+}
+.serv:hover {
+  color: rgb(0, 46, 46);
+}
+
+@media (max-width: 768px) {
+  header .mostrar-menu,
+  header .esconder-menu {
+    display: block;
+  }
+  header .menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #5f9ea0;
+    right: -100%;
+    top: 0;
+    text-align: center;
+    padding: 100px 0;
+    z-index: 100;
+    transition: 0.8s;
+  }
+  header .menu a {
+    display: block;
+    padding: 20px;
+  }
+  header .esconder-menu {
+    position: absolute;
+    top: 40px;
+    right: 40px;
+  }
+  header #check:checked ~ .menu {
+    right: 0;
+  }
+  #persona,
+  #contenido-iconos,
+  .boton-contactanos,
+  .servicios a,
+  #serv {
+    flex-direction: column;
+    display: block;
+    text-align: center;
+    padding: 20px;
+  }
+}
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+.contenido-consulta .container {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+  font-size: 1.1em;
+  text-align: center;
+}
+.contenido-consulta p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.contact-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.boton-contacto {
+  padding: 10px 20px;
+  background-color: #5f9ea0;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.boton-contacto:hover {
+  background-color: #417a80;
+  transform: scale(1.05);
+}
+
+.perfil-dueno {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 40px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 0.3s;
+}
+.perfil-dueno .foto-dueno {
+  width: 250px;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+.perfil-dueno .foto-dueno:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.perfil-dueno .texto-perfil {
+  max-width: 500px;
+  font-size: 1.1em;
+}
+.perfil-dueno .texto-perfil h4 {
+  font-size: 1.5em;
+  color: #333;
+}
+.perfil-dueno .texto-perfil p {
+  margin: 10px 0;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.banner-sin-imagen .contenido-banner {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInDown 1s ease forwards;
+}
+
+.botones-contacto {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.boton-empezar {
+  text-decoration: none;
+  color: azure;
+  border: 1px solid cadetblue;
+  padding: 20px 40px;
+  align-self: baseline;
+  transition: all 0.4s;
+}
+.boton-empezar:hover {
+  background: rgba(95, 158, 160, 0.6392156863);
+}
+
+.boton-saber-mas {
+  display: inline-block;
+  text-decoration: none;
+  color: #5f9ea0;
+  padding: 10px 30px;
+  border: 3px solid #5f9ea0;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: all 0.4s;
+}
+.boton-saber-mas:hover {
+  background: #5f9ea0;
+  color: azure;
+}
+
+/*# sourceMappingURL=styles.css.map */
