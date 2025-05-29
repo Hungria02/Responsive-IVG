@@ -1,0 +1,10 @@
+header {
+    background-color: $color-principal;
+    color: $color-texto;
+    padding: 1rem;
+    nav {
+      @include flex-center;
+      justify-content: space-between;
+    }
+  }
+  

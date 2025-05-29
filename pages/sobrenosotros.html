@@ -1,59 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="stylesheet" href="../styles/styles.css">
-    <title>Inmoviliaria Vivanco Group</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Inmobiliaria Vivanco Group - Sobre Nosotros</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h2 class="logo">InViGroup</h2>
-        <input type="checkbox" id="check">
-        <label for="check" class="mostrar-menu">
-            &#8801
-        </label>
-        <nav class="menu">
-            <a href="../index.html">HOME</a>
-            <a href="./consultas.html">Consultas</a>
-            <label for="check" class="esconder-menu">
-                &#215
-        </label>
-        </nav>
-    </header>
-    <section id="banner">
+<!-- HEADER con menú hamburguesa -->
+<header>
+    <h2 class="logo">InViGroup</h2>
+    <input type="checkbox" id="check">
+    <label for="check" class="mostrar-menu">&#8801;</label>
+    <nav class="menu">
+        <a href="../index.html">HOME</a>
+        <a href="./sobrenosotros.html">Sobre Nosotros</a>
+        <a href="./consultas.html">Consultas</a>
+        <a href="./alquileres.html">Alquileres</a>
+    <label for="check" class="esconder-menu">&#215;</label>
+    </nav>
+</header>
+
+    <section id="banner" class="banner-sin-imagen" data-aos="fade-up" data-aos-duration="1200">
         <div class="contenido-banner">
-            <h3><span>SOBRE NOSOTROS:</span>Servicio inmobiliario seguro y confiable</h3>
+            <h3><span>SOBRE NOSOTROS:</span> Servicio inmobiliario seguro y confiable</h3>
             <a href="./alquileres.html" class="serv">Alquileres</a>
             <a href="./ventas.html" class="serv">Ventas</a>
         </div>
     </section>
-    <section id="texto">
+
+    <section id="texto" data-aos="fade-up" data-aos-duration="1500" data-aos-delay="200">
         <div>
-            <p>Esta Empresa se fundó en el año 1985 por el Contador Público Nacional, Martillero y Corredor Público Dn. Rubén A. Vivanco, desarrollando desde entonces en forma simultánea servicios inmobiliarios y servicios contables-tributarios-laborales, a través de VIVANCO INMOBILIARIA y VIVANCO ESTUDIO CONTABLE. <br> <br> 
-                Se presenta específicamente como nicho de negocio las propiedades rurales representado por las chacras, campos y estancias ubicados en el norte de la Patagonia, en las provincias de Neuquén, Río Negro y La Pampa. <br> <br>
-                En materia de tasaciones nuestro servicio es permanentemente solicitado para presentaciones judiciales en materia de división de bienes, sucesiones y resoluciones de conflictos de partes, como así también por particulares y por las empresas más importante de nuestra zona de actuación, tanto con destino a venta (valor venal) como a su renta (locación).</p>
-        </div>
-    </section>
-    <section id="iconos">
-        <div id="contenido-iconos">
-            <div>
-                <img src="../img/instagram.png" width="60px" height="57px" alt="">
-            </div>
-            <div>
-                <img src="../img/facebook.png" width="60px" height="57px" alt="">
-            </div>
-            <div>
-                <img src="../img/email.JPG" width="60px" height="48px" alt="">
-            </div>
+            <p>
+                Esta Empresa se fundó en el año 1985 por el Contador Público Nacional, Martillero y Corredor Público Dn. Rubén A. Vivanco, desarrollando desde entonces en forma simultánea servicios inmobiliarios y servicios contables-tributarios-laborales, a través de VIVANCO INMOBILIARIA y VIVANCO ESTUDIO CONTABLE.
+            </p>
+            <p>
+                Se presenta específicamente como nicho de negocio las propiedades rurales representado por las chacras, campos y estancias ubicados en el norte de la Patagonia, en las provincias de Neuquén, Río Negro y La Pampa.
+            </p>
+            <p>
+                En materia de tasaciones nuestro servicio es permanentemente solicitado para presentaciones judiciales en materia de división de bienes, sucesiones y resoluciones de conflictos de partes, como así también por particulares y por las empresas más importante de nuestra zona de actuación, tanto con destino a venta (valor venal) como a su renta (locación).
+            </p>
         </div>
     </section>
 
-    <footer>
+    <section id="iconos">
+        <div id="contenido-iconos">
+        <div>
+            <a href="https://www.instagram.com/vivancogroup/" target="_blank" rel="noopener noreferrer">
+            <img src="../img/instagram.png" width="40px" alt="Instagram">
+            </a>
+        </div>
+        <div>
+            <a href="https://www.facebook.com/inmobiliariavivancogroup" target="_blank" rel="noopener noreferrer">
+            <img src="../img/facebook.png" width="40px" alt="Facebook">
+            </a>
+        </div>
+        <div>
+            <a href="mailto:tasaciones@vivancogroup.com">
+            <img src="../img/email.JPG" width="40px" alt="Correo electrónico">
+            </a>
+        </div>
+    </div>
+    </section>
+
+    <footer data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
         <section id="pie">
             <h4>Provincia de Neuquén - Norte de la Patagonia - República Argentina</h4>
         </section>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+        once: true,
+        easing: 'ease-in-out',
+    });
+    </script>
 </body>
 </html>

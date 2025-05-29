@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Sobre Rubén Vivanco - InViGroup</title>
-    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <!-- Si usás Bootstrap en todas las páginas, podés agregarlo acá -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <!-- AOS para animaciones -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h2 class="logo">InViGroup</h2>
-        <input type="checkbox" id="check">
-        <label for="check" class="mostrar-menu">
-            &#8801
-        </label>
-        <nav class="menu">
-            <a href="../index.html">HOME</a>
-            <a href="./consultas.html">Consultas</a>
-            <a href="./sobrenosotros.html">Sobre Nosotros</a>
-            <label for="check" class="esconder-menu">
-                &#215
-            </label>
-        </nav>
-    </header>
+<!-- HEADER con menú hamburguesa -->
+<header>
+    <h2 class="logo">InViGroup</h2>
+    <input type="checkbox" id="check">
+    <label for="check" class="mostrar-menu">&#8801;</label>
+    <nav class="menu">
+        <a href="../index.html">HOME</a>
+        <a href="./sobrenosotros.html">Sobre Nosotros</a>
+        <a href="./consultas.html">Consultas</a>
+        <a href="./alquileres.html">Alquileres</a>
+    <label for="check" class="esconder-menu">&#215;</label>
+    </nav>
+</header>
 
-    <section id="banner" class="banner-sin-imagen">
+    <section id="banner" class="banner-sin-imagen text-white text-center py-5" data-aos="fade-up" data-aos-duration="1200">
         <div class="contenido-banner">
             <h3><span>Conozca a Rubén Vivanco</span></h3>
         </div>
@@ -31,42 +33,58 @@
 
     <section class="contenido-consulta">
         <div class="container">
-            <div class="perfil-dueno">
-                <img src="../img/Nicolas.jpg" alt="Rubén Vivanco" class="foto-dueno">
-                <div class="texto-perfil">
-                    <h4>Rubén Vivanco</h4>
-                    <p><em>Contador Público Nacional, Martillero y Corredor Público</em></p>
-                    <p>
-                        Aquí podrá encontrar información personal y profesional sobre el fundador de nuestra empresa. 
-                        Próximamente se incluirán detalles sobre su trayectoria, formación, valores y visión empresarial.
-                    </p>
-                    <p>
-                        Su compromiso con la confianza, la seguridad jurídica y el acompañamiento profesional lo convierten 
-                        en una figura clave en el desarrollo de la empresa.
-                    </p>
-                </div>
+        <div class="perfil-dueno">
+            <img src="../img/Nicolas.jpg" class="foto-dueno" alt="Rubén Vivanco">
+            <div class="texto-perfil">
+                <h4>Dn. Rubén A. Vivanco</h4>
+                <em>Contador Público, Martillero y Corredor Público</em>
+                <p>            Rubén Vivanco, de 58 años, es oriundo de la ciudad de Neuquén Capital. Es el fundador de InViGroup, empresa
+                con más de tres décadas de trayectoria en servicios inmobiliarios y contables en la región.</p>
+                <p> Con una sólida formación profesional y una profunda vocación de servicio, Rubén ha desarrollado un enfoque
+                basado en la confianza, la seguridad jurídica y el acompañamiento integral a cada cliente. Además de su
+                rol como martillero y corredor público, asesora legal y financieramente a empresas y particulares en todo
+                el norte de la Patagonia.
+                </p>
+                <p>
+                Su compromiso ético, experiencia y pasión por el desarrollo local hacen de él un referente en el rubro
+                inmobiliario regional.
+                </p>
             </div>
         </div>
+    </div>
     </section>
 
     <section id="iconos">
         <div id="contenido-iconos">
-            <div>
-                <img src="../img/instagram.png" width="60px" height="57px" alt="Instagram">
-            </div>
-            <div>
-                <img src="../img/facebook.png" width="60px" height="57px" alt="Facebook">
-            </div>
-            <div>
-                <img src="../img/email.JPG" width="60px" height="48px" alt="Email">
-            </div>
+        <div>
+            <a href="https://www.instagram.com/vivancogroup/" target="_blank" rel="noopener noreferrer">
+            <img src="../img/instagram.png" width="40px" alt="Instagram">
+            </a>
         </div>
+        <div>
+            <a href="https://www.facebook.com/inmobiliariavivancogroup" target="_blank" rel="noopener noreferrer">
+            <img src="../img/facebook.png" width="40px" alt="Facebook">
+            </a>
+        </div>
+        <div>
+            <a href="mailto:tasaciones@vivancogroup.com">
+            <img src="../img/email.JPG" width="40px" alt="Correo electrónico">
+            </a>
+        </div>
+    </div>
     </section>
-    
-    <footer>
-        <section id="pie">
+
+    <footer data-aos="fade-up" data-aos-duration="1000">
+        <section id="pie" class="text-center py-3">
             <h4>Provincia de Neuquén - Norte de la Patagonia - República Argentina</h4>
         </section>
     </footer>
+
+    <!-- Scripts para animaciones AOS y Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
