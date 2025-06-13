@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles/styles.css" />
-    <title>Inmobiliaria Vivanco Group</title>
-<!-- AOS (Animaciones) -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Inmobiliaria Vivanco Group. Servicios seguros y confiables en el norte de la Patagonia.">
+  <meta name="keywords" content="inmobiliaria, vivanco, neuquén, casas, alquiler, venta, tasaciones">
+  <meta name="author" content="Vivanco Group" />
+  <title>Inmobiliaria Vivanco Group</title>
+  <link rel="stylesheet" href="styles/styles.css" as="style" rel="preload" />
+  <link rel="icon" href="./img/favicon.ico" type="image/x-icon" />
+
+  <!-- AOS (Animaciones) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-<!-- HEADER con menú hamburguesa -->
-<header>
-    <h2 class="logo">InViGroup</h2>
+
+  <!-- HEADER -->
+  <header>
+    <h1 class="logo">InViGroup</h1>
     <input type="checkbox" id="check">
     <label for="check" class="mostrar-menu">&#8801;</label>
-        <nav class="menu">
-            <a href="./pages/Servicios.html">Servicios</a>
-            <a href="./sobrenosotros.html">Sobre Nosotros</a>
-            <a href="./consultas.html">Consultas</a>
-    <label for="check" class="esconder-menu">&#215;</label>
+    <nav class="menu" role="navigation">
+      <a href="./pages/Servicios.html">Servicios</a>
+      <a href="./sobrenosotros.html">Sobre Nosotros</a>
+      <a href="./consultas.html">Consultas</a>
+      <label for="check" class="esconder-menu">&#215;</label>
     </nav>
-</header>
+  </header>
 
+  <!-- BANNER PRINCIPAL -->
+  <main>
     <section id="banner" data-aos="fade-up" data-aos-duration="1000">
-        <div class="contenido-banner">
-            <h3><span>INMOBILIARIA VIVANCO GROUP:</span> Segura y confiable</h3>
-            <a href="./pages/Servicios.html" class="boton-empezar">Empezar</a>
-        </div>
+      <div class="contenido-banner">
+        <h2><span>INMOBILIARIA VIVANCO GROUP:</span> Segura y confiable</h2>
+        <a href="./pages/Servicios.html" class="boton-empezar">Empezar</a>
+      </div>
     </section>
 
+    <!-- SECCIÓN PERSONA -->
     <section id="persona" data-aos="fade-up" data-aos-duration="1000">
-        <div>
-            <img src="./img/Nicolas.jpg" alt="Foto de Rubén Vivanco" />
-            <h4>Rubén Vivanco</h4>
-            <p>Contador Público Nacional, Martillero y Corredor Público</p>
-            <a href="./pages/sabermas.html" class="boton-saber-mas">Saber más</a>
-        </div>
+      <div>
+        <img src="./img/Nicolas.jpg" alt="Foto de Rubén Vivanco" loading="lazy" />
+        <h3>Rubén Vivanco</h3>
+        <p>Contador Público Nacional, Martillero y Corredor Público</p>
+        <a href="./pages/sabermas.html" class="boton-saber-mas">Saber más</a>
+      </div>
     </section>
 
-    <section id="iconos">
-        <div id="contenido-iconos">
+    <!-- ICONOS DE CONTACTO -->
+    <section id="iconos" aria-label="Redes sociales">
+      <div id="contenido-iconos">
         <div>
-            <a href="https://www.instagram.com/vivancogroup/" target="_blank" rel="noopener noreferrer">
-            <img src="./img/instagram.png" width="40px" alt="Instagram">
-            </a>
+          <a href="https://www.instagram.com/vivancogroup/" target="_blank" rel="noopener noreferrer">
+            <img src="./img/instagram.png" width="40" alt="Logo de Instagram" loading="lazy">
+          </a>
         </div>
         <div>
-            <a href="https://www.facebook.com/inmobiliariavivancogroup" target="_blank" rel="noopener noreferrer">
-            <img src="./img/facebook.png" width="40px" alt="Facebook">
-            </a>
+          <a href="https://www.facebook.com/inmobiliariavivancogroup" target="_blank" rel="noopener noreferrer">
+            <img src="./img/facebook.png" width="40" alt="Logo de Facebook" loading="lazy">
+          </a>
         </div>
         <div>
-            <a href="mailto:tasaciones@vivancogroup.com">
-            <img src="./img/email.JPG" width="40px" alt="Correo electrónico">
-            </a>
+          <a href="mailto:tasaciones@vivancogroup.com">
+            <img src="./img/email.JPG" width="40" alt="Ícono de correo electrónico" loading="lazy">
+          </a>
         </div>
-    </div>
+      </div>
     </section>
+  </main>
 
-<footer data-aos="fade-up" data-aos-duration="1000">
+  <!-- FOOTER -->
+  <footer data-aos="fade-up" data-aos-duration="1000">
     <section id="pie">
-        <h4>Provincia de Neuquén - Norte de la Patagonia - República Argentina</h4>
+      <p>Provincia de Neuquén - Norte de la Patagonia - República Argentina</p>
     </section>
-</footer>
+  </footer>
 
-<!-- Scripts de AOS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-    AOS.init();
-    </script>
+  <!-- Scripts AOS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>AOS.init();</script>
 </body>
 </html>

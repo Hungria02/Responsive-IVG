@@ -5,64 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Servicios - InViGroup</title>
     <link rel="stylesheet" href="../styles/styles.css" />
-    <!-- AOS CSS si usas AOS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet" />
 </head>
 <body>
-    <header>
-        <h2 class="logo">InViGroup</h2>
-        <input type="checkbox" id="check" />
-        <label for="check" class="mostrar-menu">&#8801;</label>
-        <nav class="menu">
-            <a href="../index.html">HOME</a>
-            <a href="./sobrenosotros.html">Sobre Nosotros</a>
-            <a href="./consultas.html">Consultas</a>
-            <label for="check" class="esconder-menu">&#215;</label>
-        </nav>
-    </header>
 
-    <section id="banner" class="banner-sin-imagen" data-aos="fade-down" data-aos-duration="1200">
-        <div class="contenido-banner">
-            <nav class="servicios">
-                <a href="./alquileres.html" data-aos="fade-right" data-aos-delay="200" data-aos-duration="1000">Alquileres</a>
-                <a href="./ventas.html" data-aos="fade-left" data-aos-delay="400" data-aos-duration="1000">Ventas</a>
-            </nav>
-        </div>
-    </section>
+<!-- HEADER -->
+<header>
+    <h2 class="logo">InViGroup</h2>
+    <input type="checkbox" id="check" />
+    <label for="check" class="mostrar-menu">&#8801;</label>
+    <nav class="menu">
+        <a href="../index.html">HOME</a>
+        <a href="./sobrenosotros.html">Sobre Nosotros</a>
+        <a href="./consultas.html">Consultas</a>
+    <label for="check" class="esconder-menu">&#215;</label>
+    </nav>
+</header>
 
-    <section id="iconos">
-        <div id="contenido-iconos">
-        <div>
-            <a href="https://www.instagram.com/vivancogroup/" target="_blank" rel="noopener noreferrer">
-            <img src="../img/instagram.png" width="40px" alt="Instagram">
-            </a>
-        </div>
-        <div>
-            <a href="https://www.facebook.com/inmobiliariavivancogroup" target="_blank" rel="noopener noreferrer">
-            <img src="../img/facebook.png" width="40px" alt="Facebook">
-            </a>
-        </div>
-        <div>
-            <a href="mailto:tasaciones@vivancogroup.com">
-            <img src="../img/email.JPG" width="40px" alt="Correo electrónico">
-            </a>
-        </div>
+<!-- BANNER CON ACCESOS A ALQUILERES Y VENTAS -->
+<section id="banner" class="banner-sin-imagen text-center py-5" data-aos="fade-down" data-aos-duration="1000">
+    <div class="contenido-banner">
+    <nav class="servicios d-flex justify-content-center gap-4">
+        <a href="./alquileres.html" class="btn btn-outline-light" data-aos="fade-right" data-aos-delay="200">Alquileres</a>
+        <a href="./ventas.html" class="btn btn-outline-light" data-aos="fade-left" data-aos-delay="400">Ventas</a>
+    </nav>
     </div>
+</section>
+
+<!-- ICONOS DE CONTACTO -->
+<section id="iconos">
+    <div id="contenido-iconos">
+    <div>
+        <a href="https://www.instagram.com/vivancogroup/" target="_blank" rel="noopener noreferrer">
+            <img src="../img/instagram.png" width="40px" alt="Instagram" />
+        </a>
+    </div>
+    <div>
+        <a href="https://www.facebook.com/inmobiliariavivancogroup" target="_blank" rel="noopener noreferrer">
+            <img src="../img/facebook.png" width="40px" alt="Facebook" />
+        </a>
+    </div>
+    <div>
+        <a href="mailto:tasaciones@vivancogroup.com">
+            <img src="../img/email.JPG" width="40px" alt="Correo electrónico" />
+        </a>
+    </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer data-aos="fade-up" data-aos-duration="1000">
+    <section id="pie" class="text-center py-3">
+        <h4>Provincia de Neuquén - Norte de la Patagonia - República Argentina</h4>
     </section>
+</footer>
 
-    <!-- FOOTER -->
-    <footer data-aos="fade-up" data-aos-duration="1000">
-        <section id="pie">
-            <h4>Provincia de Neuquén - Norte de la Patagonia - República Argentina</h4>
-        </section>
-    </footer>
-    
-    
+<!-- SCRIPTS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+    duration: 1000,
+    once: true,
+    });
+</script>
 
-    <!-- AOS JS si usas AOS -->
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
 </body>
 </html>
